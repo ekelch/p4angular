@@ -1,0 +1,6 @@
+<h1>User Home Page</h1>
+<p>{{this.user?.firstName}}</p>
+<p>{{this.user?.lastName}}</p>
+<p>{{this.user?.username}}</p>
+
+<li *ngFor="let account of accounts; index as i">{{accounts[i].balance}}</li>
