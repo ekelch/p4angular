@@ -3,4 +3,4 @@
 <p>{{this.user?.lastName}}</p>
 <p>{{this.user?.username}}</p>
 
-<li *ngFor="let account of accounts; index as i">{{accounts[i].balance}}</li>
+<app-account *ngFor="let account of accounts; index as i" [account] = "accounts[i]"></app-account>

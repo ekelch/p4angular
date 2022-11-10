@@ -1,7 +1,7 @@
 import { Account } from "./account";
 
 export class User {
-    id: number;
+    id!: number;
     username: String;
     password: String;
     firstName: String;

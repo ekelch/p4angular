@@ -9,12 +9,19 @@ import { environment } from 'src/environments/environment';
 })
 export class UserserviceService {
 
-  private userUrl = "/api/user/test"; // TESTESTSETSETTSEESTTESTSETESTESTSETES
-
+  private userUrl = "/api/user";
   constructor(private http: HttpClient) { }
 
-  public getUser(): Observable<User> {
-    return this.http.get<User>(environment.baseUrl + this.userUrl, {headers: environment.headers})
+  public getUser(id: string): Observable<User> {
+    let getUrl = environment.baseUrl + this.userUrl + '/' + id;
+    console.log(getUrl)
+    return this.http.get<User>(getUrl, {headers: environment.headers, withCredentials: environment.withCredentials})
+  }
+
+  public login(username: string, password: string): Observable<User> {
+    const payload = {username: username, password: password};
+    let postUrl = environment.baseUrl + this.userUrl + '/login';
+    return this.http.post<User>(postUrl, payload, {headers: environment.headers})
   }
 
 }
