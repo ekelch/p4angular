@@ -10,12 +10,16 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 export class AccountComponent implements OnInit {
 
   @Input() account!: Account;
+  displayEdit: boolean = false;
 
   constructor(private userService: UserserviceService) { }
 
   ngOnInit(): void {
     
-    console.log(this.account);
+  }
+
+  onClick() {
+    this.displayEdit = !this.displayEdit;
   }
 
 }

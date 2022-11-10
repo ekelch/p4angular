@@ -1,5 +1,19 @@
-<br>
-<p>Account name: {{account.name}}</p>
-<p>Account Number: {{account.id}}</p>
-<p>Balance: {{account.balance}}</p>
-<br>
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>{{account.name}}</h2>
+                <h4>Account #{{account.id}}</h4>
+            </div>
+            <div class="col-sm-4">
+                <h1>Balance: {{account.balance | currency}}</h1>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary" (click)="onClick()">Make Transaction</button>
+            </div>
+        </div>
+        <div>
+            <app-edit-account *ngIf="displayEdit" [account]="account"></app-edit-account>
+        </div>
+    </div>
+</div>

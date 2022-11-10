@@ -1,0 +1,15 @@
+<div class="container">
+    <form [formGroup]="depositForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="depo">Deposit what amount?</label>
+                    <input id="depo" type="number" placeholder="$$$$.$$" class="form-control" formControlName="depo">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-warning" type="submit">Make Deposit</button>
+            </div>
+        </div>
+    </form>
+</div>

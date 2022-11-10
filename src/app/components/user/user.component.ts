@@ -21,11 +21,9 @@ export class UserComponent implements OnInit {
     this.userJSON = sessionStorage.getItem('user');
     this.user = JSON.parse(this.userJSON);
     this.id = this.user!.id;
-    console.log(this.id)
 
     this.userService.getUser(`${this.id}`).subscribe(
       (response) => {
-        console.log(response);
         this.user = new User(response.id, response.username, response.password, response.firstName, response.lastName, response.permission, response.accounts);
         this.accounts = response.accounts;
       },

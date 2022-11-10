@@ -1,2 +1,18 @@
-<p>Welcome to the best bank in the entire world!</p>
-<button [routerLink] = "['/login']">Click here to login</button>
+<div class="jumbotron text-center">
+    <h1>Hello!</h1>
+    <p>Welcome to the best bank in the entire world!</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Click here to login!</h3>
+            <button class="btn btn-primary" [routerLink] = "['/login']">Login</button>
+        </div>
+        <div class="col-lg-6">
+            <h3>This will also log you in for now!</h3>
+            <button class="btn btn-primary" [routerLink] = "['/login']">Login</button>
+        </div>
+    </div>
+</div>
+

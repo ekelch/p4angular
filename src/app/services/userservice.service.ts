@@ -14,7 +14,6 @@ export class UserserviceService {
 
   public getUser(id: string): Observable<User> {
     let getUrl = environment.baseUrl + this.userUrl + '/' + id;
-    console.log(getUrl)
     return this.http.get<User>(getUrl, {headers: environment.headers, withCredentials: environment.withCredentials})
   }
 

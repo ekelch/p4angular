@@ -1,6 +1,15 @@
-<h1>User Home Page</h1>
-<p>{{this.user?.firstName}}</p>
-<p>{{this.user?.lastName}}</p>
-<p>{{this.user?.username}}</p>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome, {{this.user?.username}}.</h1>
+        <p>Account holder: {{this.user?.firstName}} {{this.user?.lastName}}</p>
+    </div>
+</div>
 
-<app-account *ngFor="let account of accounts; index as i" [account] = "accounts[i]"></app-account>
+<div class="container">
+    <div class="well-lg">
+        <h1>Your Accounts</h1>
+    </div>
+    <app-account *ngFor="let account of accounts; index as i" [account] = "accounts[i]"></app-account>
+</div>
+
+

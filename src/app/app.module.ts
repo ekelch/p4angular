@@ -9,6 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditAccountComponent } from './components/edit-account/edit-account.component';
+import { DepositComponent } from './components/deposit/deposit.component';
+import { WithdrawComponent } from './components/withdraw/withdraw.component';
+import { TransferComponent } from './components/transfer/transfer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { HomeComponent } from './components/home/home.component';
     UserComponent,
     AccountComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    EditAccountComponent,
+    DepositComponent,
+    WithdrawComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,

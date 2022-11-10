@@ -1,0 +1,30 @@
+<div class="container">
+    <div *ngIf="display">
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-success btn-lg" (click)="toggleDeposit()">Deposit</button>
+            </div>
+            <div class="col-sm-9">
+                <app-deposit *ngIf="displayDeposit" [account]="account"></app-deposit>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-danger btn-lg" (click)="toggleWithdraw()">Withdraw</button>
+            </div>
+            <div class="col-sm-9">
+                <app-withdraw *ngIf="displayWithdraw" [account]="account"></app-withdraw>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-primary btn-lg">Transfer</button>
+            </div>
+            <div class="col-sm-9">
+                <app-transfer></app-transfer>
+            </div>
+        </div>
+    </div>
+</div>
